@@ -33,8 +33,8 @@ class Student:
 
         def clearData():
             self.txtStdID.delete(0, END)
-            self.txtFirstname.delete(0, END)
-            self.txtSurname.delete(0, END)
+            self.txtfname.delete(0, END)
+            self.txtsname.delete(0, END)
             self.txtDoB.delete(0, END)
             self.txtAge.delete(0, END)
             self.txtGender.delete(0, END)
@@ -48,7 +48,7 @@ class Student:
                                               Age.get(), Gender.get(), Mobile.get())
                 studentlist.delete(0, END)
                 studentlist.insert(END, (StdID.get(), Firstname.get(), Surname.get(), DoB.get(),
-                                              Age.get(), Gender.get(), Mobile.get()))
+                                         Age.get(), Gender.get(), Mobile.get()))
 
         def DisplayData():
             studentlist.delete(0, END)
@@ -63,11 +63,11 @@ class Student:
             self.txtStdID.delete(0, END)
             self.txtStdID.insert(END, sd[1])
 
-            self.txtFirstname.delete(0, END)
-            self.txtFirstname.insert(END, sd[2])
+            self.txtfname.delete(0, END)
+            self.txtfname.insert(END, sd[2])
 
-            self.txtSurname.delete(0, END)
-            self.txtSurname.insert(END, sd[3])
+            self.txtsname.delete(0, END)
+            self.txtsname.insert(END, sd[3])
 
             self.txtDoB.delete(0, END)
             self.txtDoB.insert(END, sd[4])
@@ -140,50 +140,50 @@ class Student:
         self.lblStdID = Label(DataFrameLEFT, font=('arial', 20, 'bold'), text="StudentID:", padx=2, pady=2,
                               bg="Ghost White", fg='green')
         self.lblStdID.grid(row=0, column=0, sticky=W)
-        self.lblStdID = Entry(DataFrameLEFT, font=('arial', 20, 'bold'), textvariable=StdID, width=39)
-        self.lblStdID.grid(row=0, column=1)
+        self.txtStdID = Entry(DataFrameLEFT, font=('arial', 20, 'bold'), textvariable=StdID, width=39)
+        self.txtStdID.grid(row=0, column=1)
 
         self.lblfname = Label(DataFrameLEFT, font=('arial', 20, 'bold'), text="First Name:", padx=2, pady=2,
                               bg="Ghost White", fg='green')
         self.lblfname.grid(row=1, column=0, sticky=W)
-        self.lblfname = Entry(DataFrameLEFT, font=('arial', 20, 'bold'), textvariable=Firstname, width=39)
-        self.lblfname.grid(row=1, column=1)
+        self.txtfname = Entry(DataFrameLEFT, font=('arial', 20, 'bold'), textvariable=Firstname, width=39)
+        self.txtfname.grid(row=1, column=1)
 
         self.lblsname = Label(DataFrameLEFT, font=('arial', 20, 'bold'), text="Surname:", padx=2, pady=2,
                               bg="Ghost White", fg='green')
         self.lblsname.grid(row=2, column=0, sticky=W)
-        self.lblsname = Entry(DataFrameLEFT, font=('arial', 20, 'bold'), textvariable=Surname, width=39)
-        self.lblsname.grid(row=2, column=1)
+        self.txtsname = Entry(DataFrameLEFT, font=('arial', 20, 'bold'), textvariable=Surname, width=39)
+        self.txtsname.grid(row=2, column=1)
 
         self.lblDoB = Label(DataFrameLEFT, font=('arial', 20, 'bold'), text="DoB:", padx=2, pady=2,
                               bg="Ghost White", fg='green')
         self.lblDoB.grid(row=3, column=0, sticky=W)
-        self.lblDoB = Entry(DataFrameLEFT, font=('arial', 20, 'bold'), textvariable=DoB, width=39)
-        self.lblDoB.grid(row=3, column=1)
+        self.txtDoB = Entry(DataFrameLEFT, font=('arial', 20, 'bold'), textvariable=DoB, width=39)
+        self.txtDoB.grid(row=3, column=1)
 
         self.lblAge = Label(DataFrameLEFT, font=('arial', 20, 'bold'), text="Age:", padx=2, pady=2,
                               bg="Ghost White", fg='green')
         self.lblAge.grid(row=4, column=0, sticky=W)
-        self.lblAge = Entry(DataFrameLEFT, font=('arial', 20, 'bold'), textvariable=Age, width=39)
-        self.lblAge.grid(row=4, column=1)
+        self.txtAge = Entry(DataFrameLEFT, font=('arial', 20, 'bold'), textvariable=Age, width=39)
+        self.txtAge.grid(row=4, column=1)
 
         self.lblGender = Label(DataFrameLEFT, font=('arial', 20, 'bold'), text="Gender:", padx=2, pady=2,
                               bg="Ghost White", fg='green')
         self.lblGender.grid(row=5, column=0, sticky=W)
-        self.lblGender = Entry(DataFrameLEFT, font=('arial', 20, 'bold'), textvariable=Gender, width=39)
-        self.lblGender.grid(row=5, column=1)
+        self.txtGender = Entry(DataFrameLEFT, font=('arial', 20, 'bold'), textvariable=Gender, width=39)
+        self.txtGender.grid(row=5, column=1)
 
         self.lblAddress = Label(DataFrameLEFT, font=('arial', 20, 'bold'), text="Address:", padx=2, pady=2,
                               bg="Ghost White", fg='green')
         self.lblAddress.grid(row=6, column=0, sticky=W)
-        self.lblAddress = Entry(DataFrameLEFT, font=('arial', 20, 'bold'), textvariable=Address, width=39)
-        self.lblAddress.grid(row=6, column=1)
+        self.txtAddress = Entry(DataFrameLEFT, font=('arial', 20, 'bold'), textvariable=Address, width=39)
+        self.txtAddress.grid(row=6, column=1)
 
         self.lblMobile = Label(DataFrameLEFT, font=('arial', 20, 'bold'), text="Mobile:", padx=2, pady=2,
                               bg="Ghost White", fg='green')
         self.lblMobile.grid(row=7, column=0, sticky=W)
-        self.lblMobile = Entry(DataFrameLEFT, font=('arial', 20, 'bold'), textvariable=Mobile, width=39)
-        self.lblMobile.grid(row=7, column=1)
+        self.txtMobile = Entry(DataFrameLEFT, font=('arial', 20, 'bold'), textvariable=Mobile, width=39)
+        self.txtMobile.grid(row=7, column=1)
 
         # ===================================ListBox & ScrollBar Widget===========================================
         scrollbar = Scrollbar(DataFrameRIGHT)
@@ -191,7 +191,7 @@ class Student:
 
         studentlist = Listbox(DataFrameRIGHT, width=41, height=16, font=('arial', 12, 'bold'),
                               yscrollcommand=scrollbar.set)
-        studentlist.bind('<<ListboxSelect>>',StudentRec)
+        studentlist.bind('<<ListboxSelect>>', StudentRec)
         studentlist.grid(row=00, column=0, padx=8)
         scrollbar.config(command=studentlist.yview)
 

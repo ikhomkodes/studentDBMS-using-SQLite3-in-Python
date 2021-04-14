@@ -19,8 +19,7 @@ def studentData():
 def addStdRec(StdID, Firstname, Surname, DoB, Age, Gender, Mobile):
     con = sqlite3.connect("student.db")
     cur = con.cursor()
-    cur.execute("INSERT INTO student VALUES (NULL, ?, ?, ?, ?, ?, ?, ?, ?)",
-                StdID, Firstname, Surname, DoB, Age, Gender, Mobile)
+    cur.execute("INSERT INTO student VALUES (NULL, ?, ?, ?, ?, ?, ?, ?, ?)", StdID, Firstname, Surname, DoB, Age, Gender, Mobile)
     con.commit()
     con.close()
 
@@ -57,7 +56,7 @@ def dataUpdate(id, StdID = "", Firstname = "", Surname = "", DoB = "", Age = "",
     cur = con.cursor()
     cur.execute("UPDATE student SET "
                 "StdID=?, Firstname=?, Surname=?, DoB=?, Age=?, Gender=?, Mobile=?, WHERE id=?",
-                (StdID, Firstname, Surname, DoB, Age, Gender, Mobile,id))
+                (StdID, Firstname, Surname, DoB, Age, Gender, Mobile, id))
     con.commit()
     con.close()
 
